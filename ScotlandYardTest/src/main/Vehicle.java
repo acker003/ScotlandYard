@@ -1,4 +1,4 @@
-package firstTest;
+package main;
 
 public enum Vehicle {
 

@@ -1,6 +1,9 @@
-package firstTest;
+package persons;
 
 import java.util.Scanner;
+
+import main.Matchfield;
+import main.Node;
 
 public class Detective extends Person {
 
@@ -9,6 +12,7 @@ public class Detective extends Person {
 	
 	public Detective(int id, Node position, Matchfield field) {
 		super(position, field);
+		System.out.println("Detektiv " + id + " startet bei Haltestelle " + position.getID());
 		this.id = id;
 	}
 	
@@ -18,9 +22,12 @@ public class Detective extends Person {
 	
 	@Override
 	public void ziehe() {
-		System.out.print("Bitte ziehen Sie fuer Detektiv " + id + ": ");
-		int nodeID = in.nextInt();
-		this.setPosition(nodeID);
+		int nodeID;
+		do {
+			System.out.print("Bitte ziehen Sie fuer Detektiv " + id + ": ");
+			nodeID = in.nextInt();
+		} while(!this.setPosition(nodeID));
+		
 	}
 	
 	

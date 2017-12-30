@@ -1,4 +1,4 @@
-package firstTest;
+package helper;
 
 import java.io.FileNotFoundException;
 import java.io.FileReader;
@@ -11,6 +11,9 @@ import java.util.Map;
 
 import org.apache.commons.csv.CSVFormat;
 import org.apache.commons.csv.CSVRecord;
+
+import main.Matchfield;
+import main.Node;
 
 public class CSVHelper {
 	
